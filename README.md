@@ -1,1 +1,0 @@
-# zitzot-app
