@@ -28,6 +28,9 @@ build/
 .idea
 .gradle
 gradlew
+app/src/debug
+gradle/wrapper
+gradlew.bat
 local.properties
 *.iml
 *.hprof
