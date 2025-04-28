@@ -28,8 +28,8 @@ build/
 .idea
 .gradle
 gradlew
-app/src/debug
-gradle/wrapper
+android/app/src/debug
+android/gradle/wrapper
 gradlew.bat
 local.properties
 *.iml
