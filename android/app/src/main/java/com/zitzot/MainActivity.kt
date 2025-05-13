@@ -5,7 +5,17 @@ import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnabled
 import com.facebook.react.defaults.DefaultReactActivityDelegate
 
+// --Required for React Navigation integration and passing data between activities
+import android.os.Bundle;
+// --end
+
 class MainActivity : ReactActivity() {
+
+  // --React Navigation integration
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(null)
+  }
+  // --end
 
   /**
    * Returns the name of the main component registered from JavaScript. This is used to schedule

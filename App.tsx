@@ -8,8 +8,9 @@
 import React from 'react';
 import {StatusBar, useColorScheme, View, Text} from 'react-native';
 import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
-
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+
+import Navigation from '~/navigation';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -26,10 +27,8 @@ function App(): React.JSX.Element {
             barStyle={isDarkMode ? 'light-content' : 'dark-content'}
             backgroundColor={backgroundStyle.backgroundColor}
           />
-          <View>
-            <Text>hello world</Text>
-          </View>
         </View>
+        <Navigation />
       </SafeAreaView>
     </SafeAreaProvider>
   );
