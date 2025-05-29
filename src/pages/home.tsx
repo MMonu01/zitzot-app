@@ -27,8 +27,6 @@ function HomeScreen(): React.JSX.Element {
     // Alert.alert("counter decremented by 1");
   };
 
-  console.log(counter_value);
-
   return (
     <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
       <Text>Home Screen</Text>
