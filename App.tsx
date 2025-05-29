@@ -5,15 +5,17 @@
  * @format
  */
 
-import React from 'react';
-import {StatusBar, useColorScheme, View, Text} from 'react-native';
-import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import React from "react";
+import {StatusBar, useColorScheme, View} from "react-native";
+import {Provider} from "react-redux";
+import {SafeAreaProvider, SafeAreaView} from "react-native-safe-area-context";
+import {Colors} from "react-native/Libraries/NewAppScreen";
 
-import Navigation from '~/navigation';
+import {store} from "~/store";
+import Navigation from "~/navigation";
 
 function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+  const isDarkMode = useColorScheme() === "dark";
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -21,14 +23,16 @@ function App(): React.JSX.Element {
 
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={{backgroundColor: 'white', flex: 1}}>
-        <View>
-          <StatusBar
-            barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-            backgroundColor={backgroundStyle.backgroundColor}
-          />
-        </View>
-        <Navigation />
+      <SafeAreaView style={{backgroundColor: "white", flex: 1}}>
+        <Provider store={store}>
+          <View>
+            <StatusBar
+              barStyle={isDarkMode ? "light-content" : "dark-content"}
+              backgroundColor={backgroundStyle.backgroundColor}
+            />
+          </View>
+          <Navigation />
+        </Provider>
       </SafeAreaView>
     </SafeAreaProvider>
   );
