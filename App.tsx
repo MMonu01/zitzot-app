@@ -9,21 +9,16 @@ import React from "react";
 import {Provider} from "react-redux";
 import {StatusBar, View} from "react-native";
 import {SafeAreaProvider, SafeAreaView} from "react-native-safe-area-context";
-import {Colors} from "react-native/Libraries/NewAppScreen";
-
 import {store} from "~/store";
 import Navigation from "~/navigation";
 
 function App(): React.JSX.Element {
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={{backgroundColor: Colors.lighter, flex: 1}}>
+      <SafeAreaView style={{backgroundColor: "white", flex: 1}}>
         <Provider store={store}>
           <View>
-            <StatusBar
-              barStyle="dark-content"
-              backgroundColor={Colors.lighter}
-            />
+            <StatusBar barStyle="dark-content" backgroundColor="white" />
           </View>
           <Navigation />
         </Provider>

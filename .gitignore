@@ -27,16 +27,13 @@ DerivedData
 build/
 .idea
 .gradle
-gradlew
-android/app/src/debug
-android/gradle/wrapper
-gradlew.bat
 local.properties
 *.iml
 *.hprof
 .cxx/
 *.keystore
 !debug.keystore
+.kotlin/
 
 # node.js
 #
